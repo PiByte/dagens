@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dagens</title>
+        
+        <meta charset="UTF-8">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/site.webmanifest">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./stylesheets/reset.css">
+        <link rel="stylesheet" href="./stylesheets/main.css">
+        <link rel="stylesheet" href="./stylesheets/todo.css">
+        <link rel="stylesheet" href="./stylesheets/alert.css">
+        <link rel="stylesheet" href="./stylesheets/icons.css">
+        <link rel="stylesheet" href="./stylesheets/pressable.css">
+        <link rel="stylesheet" href="./stylesheets/splash.css">
+
+        <script src="scripts/alert.js"></script>
+        <script src="scripts/todo.js"></script>
+        <script src="scripts/time.js"></script>
+        <script src="scripts/video.js"></script>
+        <script src="scripts/debug.js"></script>
+        <script src="scripts/item.js"></script>
+        <script src="scripts/format.js"></script>
+        <script src="scripts/controller.js"></script>
+        <script src="scripts/preload.js"></script>
+    </head>
+    
+    <body>
+        <div id="debug" class="hidden">
+            <p id="debugVersion">DAGENS v0.27</p>
+        </div>
+        <div id="main">
+            <div id="sections">
+                <video id="video" playsinline muted autoplay loop></video>
+                <div id="sidebar">
+                    <div id="time">
+                        <p id="date"></p>
+                        <p id="clock"></p>
+                        <p id="weekday"></p>
+                        <p id="week"></p>
+                    </div>
+                    <div id="gym">
+                        <p id="gymDay">Push #1</p>
+                        <div id="exercises">
+                            <p>Bench press</p>
+                            <p>Military press</p>
+                            <p>Incline bench press</p>
+                            <p>Dips</p>
+                            <p>Chest flies</p>
+                            <p>Face pull</p>
+                            <p>Triceps</p>
+                        </div>
+                        <div id="playPauseButton" class="pressable icon"></div>
+                        <div id="alertTest"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="todoBackground" class="hidden"></div>
+        <div id="todoWindow" class="hidden">
+            <div id="todoTitle">
+                <p>Att göra</p>
+                <hr/>
+            </div>
+        </div>
+
+        <div id="alert" class="hidden">
+            <canvas id="alertCanvas"></canvas>
+
+            <div id="alertWindow">
+                <p id="alertMessage">test</p>
+                <div id="alertProgressBar">
+                    <div id="alertProgressBarProgress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="orientation" class="">
+            <p>Please rotate your device!</p>
+        </div>
+
+        <div id="splash" class="">
+            <img src="./res/logo.svg" alt="" id="logo" />
+            <img src="./res/loading.svg" alt="" id="loadingIndicator" />
+        </div>
+
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>

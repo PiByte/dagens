@@ -1,0 +1,10 @@
+.pressable {
+    transition: transform 0.1s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.pressable:active {
+    transform: scale(0.9);
+
+    outline: 0; /* idk if this does anything tbh */
+}

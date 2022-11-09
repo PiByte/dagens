@@ -1,0 +1,77 @@
+#todoBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#todoWindow {
+    /* Place in center */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 640px;
+    height: 640px;
+
+    background-color: var(--color-white);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    box-sizing: border-box;
+    padding: 32px;
+
+    font-size: 32px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#todoTitle {
+    font-weight: bold;
+}
+
+#todoTitle hr {
+    border-style: solid;
+}
+
+/* Check boxes */
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.checkbox {
+    position: relative;
+}
+
+.checkbox .box {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 24px;
+    border: 2px solid var(--color-black);
+    box-sizing: border-box;
+}
+
+.checkbox .check {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    
+    background-color: var(--color-red);
+    border-radius: 12px;
+}
+
+.strikeThroughText {
+    text-decoration: line-through;
+    text-decoration-color: var(--color-red);
+}

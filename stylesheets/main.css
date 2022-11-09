@@ -1,0 +1,138 @@
+:root {
+    --color-black: #131513;
+    --color-white: #FFFFFF;
+    --color-yellow: #FCBA04;
+    --color-red: #DB162F;
+
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* BRUH */
+html, body { overflow: hidden; }
+
+/* Main screen */
+
+#sections {
+    display: flex;
+}
+
+#video {
+    height: 100vh;
+    width: 100vh;
+}
+
+/* Sidebar */
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: stretch;
+}
+
+/* Time */
+
+#time {
+    box-sizing: border-box;
+    padding: 16px;
+
+    aspect-ratio: 1;
+
+    font-size: 32px;
+    color: var(--color-white);
+
+    background-color: var(--color-black);
+}
+
+#date, #clock {
+    font-weight: bold;
+}
+
+/* Gym */
+
+#gym {
+    box-sizing: border-box;
+    padding: 16px;
+
+    flex-grow: 1;
+
+    direction: rtl;
+    color: var(--color-black);
+    font-size: 24px;
+
+    position: relative;
+
+    background-color: var(--color-yellow);
+}
+
+#gymDay {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#alertTest {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 48px;
+    height: 48px;
+}
+
+#playPauseButton {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--color-black);
+    border-radius: 24px;
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#orientation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-black);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: var(--color-white);
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Debug stuff */
+
+#debug {
+    font-family:'Courier New', Courier, monospace;
+    
+    z-index: 1000;
+    position: fixed;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+#debugVersion {
+    font-weight: bold;
+}

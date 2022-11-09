@@ -1,0 +1,7 @@
+.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.playIcon { background-image: url("../res/play.svg"); }
+.pauseIcon { background-image: url("../res/pause.svg"); }

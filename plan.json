@@ -1,0 +1,26 @@
+{
+    "videos": ["/media/mealbox.mp4", "/media/homecoming.mp4"],
+    "gym": [
+        { "name": "day", "exercises": ["asd", "sdfgdf", "sdsdfg"] }
+    ],
+    "jingle": "/media/alert.mp3",
+    "alerts": [
+        { "h": 6,  "m": 0, "message": "Ät frukost." },
+        { "h": 9,  "m": 0, "message": "Ta en paus." },
+        { "h": 12, "m": 0, "message": "Ät lunch." },
+        { "h": 15, "m": 0, "message": "Ta en paus." },
+        { "h": 18, "m": 0, "message": "Ät middag." },
+        { "h": 19, "m": 30,"message": "Gå till gymmet." },
+        { "h": 21, "m": 0, "message": "Ta en paus." },
+        { "h": 22, "m": 0, "message": "Gå och lägg dig." }
+    ],
+    "todo": [
+        ["Tvätta", "Vik tvätt", "Gör frukost", "Diska"],
+        ["Undanplockning", "Dammsugning", "Badrum", "Gör frukost", "Diska"],
+        ["Gör frukost", "Diska"],
+        ["Undanplockning", "Dammsugning", "Badrum", "Gör frukost", "Diska"],
+        ["Gör frukost", "Diska"],
+        ["Gör frukost", "Diska"],
+        ["Undanplockning", "Dammsugning", "Badrum", "Gör frukost", "Diska"]
+    ]
+}
