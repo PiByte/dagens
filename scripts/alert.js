@@ -3,14 +3,12 @@ class Alert
     constructor()
     {
         // DOM
-        this.messageLabel = document.getElementById("alertMessage");
-        this.progressBar = document.getElementById("alertProgressBarProgress");
+        this.messageLabel = document.getElementById("alert-message");
+        this.progressBar = document.getElementById("alert-progress-bar-indicator");
 
         this.alertDiv = document.getElementById("alert");
-        this.alertCanvas = document.getElementById("alertCanvas");
-        this.alertWindow = document.getElementById("alertWindow");
-
-        this.video = document.getElementById("video"); // remove
+        this.alertCanvas = document.getElementById("alert-canvas");
+        this.alertWindow = document.getElementById("alert-window");
 
         // Setup canvas
         this.alertCanvas.width = window.innerWidth;
@@ -64,8 +62,6 @@ class Alert
         // Update message
         this.messageLabel.innerHTML = message;
 
-        this.video.pause();
-
         // Start timer
         this.interval = setTimeout(this.done.bind(this), this.time);
 
@@ -84,8 +80,7 @@ class Alert
     {
         // Hide alert div
         this.alertDiv.classList.add("hidden");
-            
-        this.video.play();
+
         this.alertJingle.pause();
         this.alertJingle.currentTime = 0;
 

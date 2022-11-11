@@ -12,9 +12,9 @@ class Controller
         this.video = new Video();
 
         // DOM
-        this.DOMorientation = document.getElementById("orientation");
-        this.DOMsplash = document.getElementById("splash");
-        this.DOMalertTest = document.getElementById("alertTest");
+        this.DOMorientation = document.getElementById("orientation-warning");
+        this.DOMsplash = document.getElementById("splash-screen");
+        this.DOMalertTest = document.getElementById("main-alert-test");
 
         // Events
         window.addEventListener("orientationchange", this.checkOrientation.bind(this));
@@ -42,7 +42,7 @@ class Controller
         this.time.loadAlerts(this.plan.alerts, msg => this.alert.createAlert(msg));
         this.alert.loadJingle(jingle);
 
-        this.updateContent();
+        this.updateContent(false);
 
         debugPrint("Loading done.");
         
@@ -56,7 +56,8 @@ class Controller
         };
     }
 
-    updateContent()
+    // If reset == true, the to-do list will be cleared
+    updateContent(reset)
     {
         // Get amount of days since 1 jan 1970
         var now = new Date();
@@ -66,9 +67,13 @@ class Controller
         var projectVideo = day % this.plan.videos.length;
         var gymDay = this.plan.gym[day % this.plan.gym.length];
 
-        this.todo.loadList(todoList); // might cause problem, cause we're not running Todo.clearList()
+        if (reset)
+            this.todo.clearList();
+        this.todo.loadList(todoList);
         this.video.loadVideo(projectVideo);
         // TODO: add gym
+
+        this.todo.updateTitle(now.getDay());
     }
 
     checkOrientation()

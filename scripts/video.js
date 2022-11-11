@@ -5,29 +5,25 @@ class Video
         this.videos = [];
 
         // DOM
-        this.video = document.getElementById("video");
-        this.playPauseButton = document.getElementById("playPauseButton");
+        this.video = document.getElementById("main-video");
+        this.playButton = document.getElementById("main-play-button");
 
-        this.playPauseButton.addEventListener("click", this.toggle.bind(this));
-
-        // Set icon
-        // We're assuming that autoplay works --> pause icon
-        document.getElementById("playPauseButton").classList.add("pauseIcon");
+        this.playButton.addEventListener("click", this.toggle.bind(this));
     }
     
     toggle()
     {
         if (this.isPlaying())
         {
-            document.getElementById("playPauseButton").classList.remove("pauseIcon");
-            document.getElementById("playPauseButton").classList.add("playIcon");
+            this.playButton.classList.remove("icon-pause");
+            this.playButton.classList.add("icon-play");
 
             this.pause();
         }
         else
         {
-            document.getElementById("playPauseButton").classList.add("pauseIcon");
-            document.getElementById("playPauseButton").classList.remove("playIcon");
+            this.playButton.classList.add("icon-pause");
+            this.playButton.classList.remove("icon-play");
 
             this.play();
         }

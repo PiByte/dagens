@@ -1,4 +1,4 @@
-#splash {
+.splash-screen {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,12 +12,12 @@
     align-items: center;
 }
 
-#logo {
+.splash-logo {
     width: 96px;
     height: 96px;
 }
 
-#loadingIndicator {
+.splash-loading {
     position: fixed;
     bottom: 25%;
 

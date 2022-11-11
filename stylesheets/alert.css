@@ -1,4 +1,4 @@
-#alertCanvas {
+.alert-canvas {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-#alertWindow {
+.alert-window {
     /* Place in center */
     position: fixed;
     top: 50%;
@@ -21,7 +21,7 @@
     border-radius: 5px;
 }
 
-#alertMessage {
+.alert-message {
     font-size: 64px;
     font-weight: bold;
     text-align: center;
@@ -33,7 +33,7 @@
     transform: translate(-50%, -50%);
 }
 
-#alertProgressBar {
+.alert-progress-bar {
     position: absolute;
     
     width: calc(100% - 64px); /* 32px * 2 */
@@ -47,7 +47,7 @@
     background-color: rgba(0, 0, 0, 0.10);
 }
 
-#alertProgressBarProgress {
+.alert-progress-bar-indicator {
     background-color: var(--color-red);
 
     border-radius: inherit;

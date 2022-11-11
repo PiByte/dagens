@@ -19,10 +19,10 @@ class Item
         this.text.innerHTML = name;
 
         // Classes
-        this.element.className = "todoItem";
-        checkbox.className = "pressable checkbox";
-        this.check.className = "check hidden";
-        box.className = "box";
+        this.element.className = "todo-item";
+        checkbox.className = "pressable todo-checkbox";
+        this.check.className = "todo-checkbox-check hidden";
+        box.className = "todo-checkbox-box";
 
         // Append to parent (this.element)
         checkbox.appendChild(this.check);
@@ -41,7 +41,7 @@ class Item
         this.value = !this.value;
 
         this.check.classList.toggle("hidden");
-        this.text.classList.toggle("strikeThroughText");
+        this.text.classList.toggle("todo-strike");
 
         localStorage.setItem(this.name, this.value);
     }

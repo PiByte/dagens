@@ -19,18 +19,18 @@ html, body { overflow: hidden; }
 
 /* Main screen */
 
-#sections {
+.main-sections {
     display: flex;
 }
 
-#video {
+.main-video {
     height: 100vh;
     width: 100vh;
 }
 
 /* Sidebar */
 
-#sidebar {
+.main-sidebar {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -39,7 +39,7 @@ html, body { overflow: hidden; }
 
 /* Time */
 
-#time {
+.main-time {
     box-sizing: border-box;
     padding: 16px;
 
@@ -51,13 +51,13 @@ html, body { overflow: hidden; }
     background-color: var(--color-black);
 }
 
-#date, #clock {
+.main-date, .main-clock {
     font-weight: bold;
 }
 
 /* Gym */
 
-#gym {
+.main-gym {
     box-sizing: border-box;
     padding: 16px;
 
@@ -72,12 +72,12 @@ html, body { overflow: hidden; }
     background-color: var(--color-yellow);
 }
 
-#gymDay {
+.main-gym-day {
     font-size: 32px;
     font-weight: bold;
 }
 
-#alertTest {
+.main-alert-test {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -86,7 +86,7 @@ html, body { overflow: hidden; }
     height: 48px;
 }
 
-#playPauseButton {
+.main-play-button {
     position: absolute;
     left: 16px;
     bottom: 16px;
@@ -102,7 +102,7 @@ html, body { overflow: hidden; }
     align-items: center;
 }
 
-#orientation {
+.orientation-warning {
     position: fixed;
     top: 0;
     left: 0;
@@ -124,7 +124,7 @@ html, body { overflow: hidden; }
 
 /* Debug stuff */
 
-#debug {
+.debug {
     font-family:'Courier New', Courier, monospace;
     
     z-index: 1000;
@@ -133,6 +133,6 @@ html, body { overflow: hidden; }
     mix-blend-mode: difference;
 }
 
-#debugVersion {
+.debug-version {
     font-weight: bold;
 }

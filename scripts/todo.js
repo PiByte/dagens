@@ -5,10 +5,11 @@ class Todo
         this.items = [];
 
         // DOM
-        this.todoBackground = document.getElementById("todoBackground");
-        this.todoWindow = document.getElementById("todoWindow");
+        this.todoBackground = document.getElementById("todo-background");
+        this.todoWindow = document.getElementById("todo-window");
+        this.todoTitle = document.getElementById("todo-title");
 
-        this.video = document.getElementById("video");
+        this.video = document.getElementById("main-video");
 
         // Events
         this.video.addEventListener("click", this.openWindow.bind(this));
@@ -26,6 +27,10 @@ class Todo
             transform: ["translate(-50%, -50%)", "translate(-50%, -50%) translateY(-100vh)"],
             easing: ["ease"]
         };
+
+        // Other
+        this.weekdays = ["söndag", "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"];
+        this.titleFormat = "Att göra (%):";
     }
 
     loadList(list)
@@ -61,6 +66,11 @@ class Todo
 
             this.busy = false;
         };
+    }
+
+    updateTitle(day)
+    {
+        this.todoTitle.innerHTML = String.format(this.titleFormat, this.weekdays[day]);
     }
 
     closeWindow()

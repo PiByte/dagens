@@ -3,5 +3,5 @@
     background-repeat: no-repeat;
 }
 
-.playIcon { background-image: url("../res/play.svg"); }
-.pauseIcon { background-image: url("../res/pause.svg"); }
+.icon-play { background-image: url("../res/play.svg"); }
+.icon-pause { background-image: url("../res/pause.svg"); }

@@ -38,22 +38,23 @@
     </head>
     
     <body>
-        <div id="debug" class="hidden">
-            <p id="debugVersion">DAGENS v0.27</p>
+        <div id="debug" class="debug">
+            <p class="debug-version">DAGENS v0.27</p>
         </div>
-        <div id="main">
-            <div id="sections">
-                <video id="video" playsinline muted autoplay loop></video>
-                <div id="sidebar">
-                    <div id="time">
-                        <p id="date"></p>
-                        <p id="clock"></p>
-                        <p id="weekday"></p>
-                        <p id="week"></p>
+
+        <div class="main">
+            <div class="main-sections">
+                <video class="main-video" id="main-video" playsinline muted autoplay loop></video>
+                <div class="main-sidebar">
+                    <div class="main-time">
+                        <p id="main-date" class="main-date"></p>
+                        <p id="main-clock" class="main-clock"></p>
+                        <p id="main-weekday" class="main-weekday"></p>
+                        <p id="main-week" class="main-week"></p>
                     </div>
-                    <div id="gym">
-                        <p id="gymDay">Push #1</p>
-                        <div id="exercises">
+                    <div class="main-gym">
+                        <p class="main-gym-day">Push #1</p>
+                        <div class="main-gym-exercises">
                             <p>Bench press</p>
                             <p>Military press</p>
                             <p>Incline bench press</p>
@@ -62,39 +63,38 @@
                             <p>Face pull</p>
                             <p>Triceps</p>
                         </div>
-                        <div id="playPauseButton" class="pressable icon"></div>
-                        <div id="alertTest"></div>
+                        <!-- We're assuming that autoplay works, ==> pause icon -->
+                        <div id="main-play-button" class="main-play-button pressable icon icon-pause"></div>
+                        <div id="main-alert-test" class="main-alert-test"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="todoBackground" class="hidden"></div>
-        <div id="todoWindow" class="hidden">
-            <div id="todoTitle">
-                <p>Att göra</p>
-                <hr/>
-            </div>
+        <div id="todo-background" class="todo-background hidden"></div>
+        <div id="todo-window" class="todo-window hidden">
+            <p id="todo-title" class="todo-title"></p>
+            <div class="todo-hr"></div>
         </div>
 
         <div id="alert" class="hidden">
-            <canvas id="alertCanvas"></canvas>
+            <canvas id="alert-canvas" class="alert-canvas"></canvas>
 
-            <div id="alertWindow">
-                <p id="alertMessage">test</p>
-                <div id="alertProgressBar">
-                    <div id="alertProgressBarProgress"></div>
+            <div id="alert-window" class="alert-window">
+                <p id="alert-message" class="alert-message"></p>
+                <div class="alert-progress-bar">
+                    <div id="alert-progress-bar-indicator" class="alert-progress-bar-indicator"></div>
                 </div>
             </div>
         </div>
 
-        <div id="orientation" class="">
+        <div id="orientation-warning" class="orientation-warning">
             <p>Please rotate your device!</p>
         </div>
 
-        <div id="splash" class="">
-            <img src="./res/logo.svg" alt="" id="logo" />
-            <img src="./res/loading.svg" alt="" id="loadingIndicator" />
+        <div id="splash-screen" class="splash-screen">
+            <img src="./res/logo.svg" alt="" class="splash-logo" />
+            <img src="./res/loading.svg" alt="" class="splash-loading" />
         </div>
 
         <script src="./scripts/main.js"></script>

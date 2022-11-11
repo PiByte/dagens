@@ -6,10 +6,10 @@ class Time
         this.createAlertFunction = null;
 
         // DOM
-        this.dateLabel = document.getElementById("date");
-        this.clockLabel = document.getElementById("clock");
-        this.weekdayLabel = document.getElementById("weekday");
-        this.weekLabel = document.getElementById("week");
+        this.dateLabel = document.getElementById("main-date");
+        this.clockLabel = document.getElementById("main-clock");
+        this.weekdayLabel = document.getElementById("main-weekday");
+        this.weekLabel = document.getElementById("main-week");
 
         this.weekdays = ["söndag", "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"];
         this.months = ["jan.", "feb.", "mars", "apr.", "maj", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "dec."];
@@ -45,7 +45,7 @@ class Time
 
         // Check reset time
         if (this.resetTime[0] == now.getHours() && this.resetTime[1] == now.getMinutes() && now.getSeconds() == 0)
-            console.log("reset");
+            debugPrint("reset!");
 
         var date = String.format(
             this.dateFormat,
@@ -63,7 +63,7 @@ class Time
 
         var weekday = String.format(
             this.weekdayFormat,
-            this.weekdays[(now.getDay() + 1) & 7]
+            this.weekdays[now.getDay()]
         );
 
         // Get the current week nr.
