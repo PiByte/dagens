@@ -5,11 +5,17 @@ class Controller
         this.plan = {};
         this.funny = false;
 
+        this.interval = setInterval(this.count.bind(this), 1000);
+
+        this.alerts = [];
+        this.reset = {};
+
         // Components
         this.todo = new Todo();
         this.alert = new Alert();
         this.time = new Time();
         this.video = new Video();
+        this.gym = new Gym();
 
         // DOM
         this.DOMorientation = document.getElementById("orientation-warning");
@@ -24,22 +30,41 @@ class Controller
         this.checkOrientation();
     }
 
+    count()
+    {
+        var now = new Date();
+
+        // Check for alerts
+        for (var alert of this.alerts)
+        {
+            if (alert.h == now.getHours() && alert.m == now.getMinutes() && 0 == now.getSeconds())
+                this.alert.createAlert(alert.message);
+        }
+
+        // Check for reset
+        if (this.reset.h == now.getHours() && this.reset.m == now.getMinutes() && 0 == now.getSeconds())
+            this.updateContent(true);
+
+        
+        this.time.update(now);
+    }
+
     async load()
     {
         debugPrint(`Fetching plan [${PLAN_URL}]...`);
 
-        // Fetch list of stuff
+        // Preloading
         const res = await fetch(PLAN_URL);
         this.plan = await res.json();
 
-        // Preload video files
         await this.video.preloadVideos(this.plan.videos);
 
-        // Preload audio jingle
         var jingle = await preload(this.plan.jingle);
 
         // load stuff
-        this.time.loadAlerts(this.plan.alerts, msg => this.alert.createAlert(msg));
+        this.reset = this.plan.reset;
+        this.alerts = this.plan.alerts;
+
         this.alert.loadJingle(jingle);
 
         this.updateContent(false);
@@ -59,6 +84,8 @@ class Controller
     // If reset == true, the to-do list will be cleared
     updateContent(reset)
     {
+        debugPrint("Updating content!");
+
         // Get amount of days since 1 jan 1970
         var now = new Date();
         var day = Math.floor(now.getTime() / 86400000);
@@ -67,11 +94,10 @@ class Controller
         var projectVideo = day % this.plan.videos.length;
         var gymDay = this.plan.gym[day % this.plan.gym.length];
 
-        if (reset)
-            this.todo.clearList();
+        if (reset) this.todo.clearList();
         this.todo.loadList(todoList);
         this.video.loadVideo(projectVideo);
-        // TODO: add gym
+        this.gym.loadList(gymDay);
 
         this.todo.updateTitle(now.getDay());
     }

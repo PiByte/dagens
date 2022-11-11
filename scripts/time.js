@@ -18,35 +18,10 @@ class Time
         this.clockFormat = "%:%:%";
         this.weekdayFormat = "%";
         this.weekFormat = "vecka %";
-
-        this.resetTime = [4, 0]; // Reset occurs at 4:00
-
-        this.interval = setInterval(this.count.bind(this), 1000);
-        this.count();
     }
 
-    loadAlerts(alerts, createAlertFunction)
+    update(now)
     {
-        this.alerts = alerts;
-        this.createAlertFunction = createAlertFunction;
-    }
-
-    count()
-    {
-        // Update the time
-        var now = new Date();
-
-        // Check alerts
-        for (var alert of this.alerts)
-        {
-            if (alert.h == now.getHours() && alert.m == now.getMinutes() && now.getSeconds() == 0)
-                this.createAlertFunction(alert.message);
-        }
-
-        // Check reset time
-        if (this.resetTime[0] == now.getHours() && this.resetTime[1] == now.getMinutes() && now.getSeconds() == 0)
-            debugPrint("reset!");
-
         var date = String.format(
             this.dateFormat,
             now.getDate().toString(),

@@ -30,6 +30,7 @@
         <script src="scripts/todo.js"></script>
         <script src="scripts/time.js"></script>
         <script src="scripts/video.js"></script>
+        <script src="scripts/gym.js"></script>
         <script src="scripts/debug.js"></script>
         <script src="scripts/item.js"></script>
         <script src="scripts/format.js"></script>
@@ -38,7 +39,7 @@
     </head>
     
     <body>
-        <div id="debug" class="debug">
+        <div id="debug" class="debug hidden">
             <p class="debug-version">DAGENS v0.27</p>
         </div>
 
@@ -53,16 +54,8 @@
                         <p id="main-week" class="main-week"></p>
                     </div>
                     <div class="main-gym">
-                        <p class="main-gym-day">Push #1</p>
-                        <div class="main-gym-exercises">
-                            <p>Bench press</p>
-                            <p>Military press</p>
-                            <p>Incline bench press</p>
-                            <p>Dips</p>
-                            <p>Chest flies</p>
-                            <p>Face pull</p>
-                            <p>Triceps</p>
-                        </div>
+                        <p id="main-gym-day" class="main-gym-day"></p>
+                        <div id="main-gym-exercises" class="main-gym-exercises"></div>
                         <!-- We're assuming that autoplay works, ==> pause icon -->
                         <div id="main-play-button" class="main-play-button pressable icon icon-pause"></div>
                         <div id="main-alert-test" class="main-alert-test"></div>

@@ -1,7 +1,15 @@
 {
+    "reset": { "h": "4", "m": "0" },
     "videos": ["/media/mealbox.mp4", "/media/homecoming.mp4"],
     "gym": [
-        { "name": "day", "exercises": ["asd", "sdfgdf", "sdsdfg"] }
+        { "name": "Push #1", "exercises": ["push", "1", "sdsdfg"] },
+        { "name": "Pull #1", "exercises": ["pull", "1", "sdkjkdsf"] },
+        { "name": "Legs #1", "exercises": ["legs", "§", "sfkfd"] },
+        { "name": "Rest",    "exercises": ["rest", "nothing", "ksfsfd"] },
+        { "name": "Push #2", "exercises": ["push", "2", "jdsjdf"] },
+        { "name": "Pull #2", "exercises": ["pull", "2", "asds"] },
+        { "name": "Legs #2", "exercises": ["legs", "2", "fpoie"] },
+        { "name": "Rest",    "exercises": ["rest", "dfskllkds", "yay"] }
     ],
     "jingle": "/media/alert.mp3",
     "alerts": [

@@ -46,8 +46,6 @@ class Alert
 
     createAlert(message)
     {
-
-
         if (this.running)
         {
             debugPrint("Error: Alert has already been called!");
