@@ -51,9 +51,9 @@ class Controller
 
     async load()
     {
+        // Preloading
         debugPrint(`Fetching plan [${PLAN_URL}]...`);
 
-        // Preloading
         const res = await fetch(PLAN_URL);
         this.plan = await res.json();
 
