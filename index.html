@@ -26,6 +26,11 @@
         <link rel="stylesheet" href="./stylesheets/pressable.css">
         <link rel="stylesheet" href="./stylesheets/splash.css">
 
+        <link rel="preload" as="image" href="/res/loading.svg">
+        <link rel="preload" as="image" href="/res/logo.svg">
+        <link rel="preload" as="image" href="/res/pause.svg">
+        <link rel="preload" as="image" href="/res/play.svg">
+
         <script src="scripts/alert.js"></script>
         <script src="scripts/todo.js"></script>
         <script src="scripts/time.js"></script>
@@ -56,7 +61,6 @@
                     <div class="main-gym">
                         <p id="main-gym-day" class="main-gym-day"></p>
                         <div id="main-gym-exercises" class="main-gym-exercises"></div>
-                        <!-- We're assuming that autoplay works, ==> pause icon -->
                         <div id="main-play-button" class="main-play-button pressable icon icon-pause"></div>
                         <div id="main-alert-test" class="main-alert-test"></div>
                     </div>
@@ -82,7 +86,7 @@
         </div>
 
         <div id="orientation-warning" class="orientation-warning">
-            <p>Please rotate your device!</p>
+            <p>Rotera enheten, tack.</p>
         </div>
 
         <div id="splash-screen" class="splash-screen">

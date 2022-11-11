@@ -26,6 +26,8 @@
     font-weight: bold;
     text-align: center;
 
+    color: var(--color-black);
+
     position: absolute;
     width: calc(100% - 64px); /* 32px * 2 */
     top: 50%;

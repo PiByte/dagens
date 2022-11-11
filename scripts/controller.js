@@ -16,7 +16,7 @@ class Controller
         this.time = new Time();
         this.video = new Video();
         this.gym = new Gym();
-
+        
         // DOM
         this.DOMorientation = document.getElementById("orientation-warning");
         this.DOMsplash = document.getElementById("splash-screen");
