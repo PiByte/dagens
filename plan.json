@@ -1,8 +1,9 @@
 {
     "reset": { "h": "4", "m": "0" },
-    "videos": ["/media/mealbox.mp4", "/media/homecoming.mp4"],
+    "videos": ["/media/mealbox.mp4", "/media/homecoming.mp4", "/media/lth.mp4"],
+	"jingle": "/media/alert.mp3",
     "gym": [
-        { "name": "Push #1", "exercises": ["Bench press", " Military press", "Incline bench press", "Dips", "Chest flies", "Face pull", "Triceps"] },
+        { "name": "Push #1", "exercises": ["Bench press", "Military press", "Incline bench press", "Dips", "Chest flies", "Face pull", "Triceps"] },
         { "name": "Pull #1", "exercises": ["Pull ups", "Bend over rows", "Close grip lat pulldown", "Seated rows", "Lats (?)", "Biceps curls", "Shrugs"] },
         { "name": "Legs #1", "exercises": ["Squats", "Romanian deadlifts", "Leg extensions", "Leg curls", "Leg press", "Goblet squats with kettlebell swing", "Seated calf raises" ] },
         { "name": "Rest",    "exercises": ["(tomt)"] },
@@ -11,7 +12,6 @@
         { "name": "Legs #2", "exercises": ["Squats", "Deadlifts", "Hip thrusts", "Bulgarian squats", "Leg extensions", "Leg curls", "Calf raises", "Streching"] },
         { "name": "Rest",    "exercises": ["(tomt)"] }
     ],
-    "jingle": "/media/alert.mp3",
     "alerts": [
         { "h": 6,  "m": 0, "message": "Ät frukost." },
         { "h": 9,  "m": 0, "message": "Ta en paus." },
