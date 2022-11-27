@@ -1,7 +1,7 @@
 {
     "reset": { "h": "4", "m": "0" },
-    "videos": ["/media/mealbox.mp4", "/media/homecoming.mp4", "/media/lth.mp4"],
-	"jingle": "/media/alert.mp3",
+    "videos": ["/dagens/media/mealbox.mp4", "/dagens/media/homecoming.mp4", "/dagens/media/lth.mp4"],
+	"jingle": "/dagens/media/alert.mp3",
     "gym": [
         { "name": "Push #1", "exercises": ["Bench press", "Military press", "Incline bench press", "Dips", "Chest flies", "Face pull", "Triceps"] },
         { "name": "Pull #1", "exercises": ["Pull ups", "Bend over rows", "Close grip lat pulldown", "Seated rows", "Lats (?)", "Biceps curls", "Shrugs"] },
