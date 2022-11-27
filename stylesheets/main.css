@@ -14,10 +14,24 @@
     display: none !important;
 }
 
-/* BRUH */
 html, body { overflow: hidden; }
 
+/* Decoy, used to solve a stupid bug in safari */
+
+.decoy {
+    background-color: black;
+    height: 100vh;
+}
+
 /* Main screen */
+
+.main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
 
 .main-sections {
     display: flex;
@@ -127,12 +141,9 @@ html, body { overflow: hidden; }
 .debug {
     font-family:'Courier New', Courier, monospace;
     
+    font-weight: bold;
+
     z-index: 1000;
     position: fixed;
-    color: white;
-    mix-blend-mode: difference;
-}
-
-.debug-version {
-    font-weight: bold;
+    color: magenta;
 }

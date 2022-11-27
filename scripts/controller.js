@@ -111,7 +111,9 @@ class Controller
 
     alertTest()
     {
-        this.alert.createAlert(this.funny ? "🖕" : "Alert test");
+        //this.updateContent(true); // reset
+
+        this.alert.createAlert(this.funny ? "🖕 fuck off mate" : "Alert test");
         this.funny = !this.funny;
     }
 }

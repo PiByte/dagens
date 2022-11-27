@@ -7,3 +7,7 @@ const PLAN_URL = "/plan.json";
 
 const c = new Controller();
 c.load();
+
+document.getElementById("bruh").addEventListener("click", () => {
+    c.alertTest();
+});

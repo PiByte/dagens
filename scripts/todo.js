@@ -50,6 +50,12 @@ class Todo
     {
         localStorage.clear();
         this.items = [];
+        
+        // Kill children
+        var children = document.getElementsByClassName("todo-item");
+
+        for (var child of [...children])
+            this.todoWindow.removeChild(child);
     }
 
     openWindow()
